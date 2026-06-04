@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anand Vidyarthi — Fractional CTO & Engineering Delivery Leader</title>
+<meta name="description" content="Fractional CTO and senior engineering delivery leader. AI transformation, cloud modernization, and delivery org leadership for technology and regulated industry companies." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:     #1a1a18;
+    --ivory:   #f5f0e8;
+    --ivory-warm: #ede8dc;
+    --brass:   #b08d57;
+    --brass-light: #c9a96e;
+    --muted:   #6b6860;
+    --border:  rgba(26,26,24,0.1);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-mono:    'DM Mono', monospace;
+    --font-body:    'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .container-narrow {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(245,240,232,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 1.1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--brass); }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--ivory) !important;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--brass) !important; color: var(--ivory) !important; }
+
+  /* ── Eyebrow ── */
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass);
+  }
+  .eyebrow-line {
+    display: inline-block;
+    height: 1px;
+    width: 2rem;
+    background: var(--brass);
+  }
+
+  /* ── Buttons ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85rem 1.8rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-ink {
+    background: var(--ink); color: var(--ivory);
+  }
+  .btn-ink:hover { background: var(--brass); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .btn-outline:hover { background: var(--ink); color: var(--ivory); }
+  .btn-outline-ivory {
+    background: transparent;
+    color: var(--ivory);
+    border: 1px solid rgba(245,240,232,0.4);
+  }
+  .btn-outline-ivory:hover { background: rgba(245,240,232,0.1); }
+
+  /* ── Animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.7s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.22s; }
+  .delay-3 { animation-delay: 0.34s; }
+  .delay-4 { animation-delay: 0.46s; }
+  .delay-5 { animation-delay: 0.58s; }
+
+  /* ════════════════════════════════════════
+     SECTION 1 — HERO
+  ════════════════════════════════════════ */
+  #hero {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+  }
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -80px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(176,141,87,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    padding-top: 3rem;
+  }
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-weight: 300;
+    line-height: 0.95;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--brass);
+  }
+  .hero-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 1.5rem;
+    line-height: 1.8;
+  }
+  .hero-title strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .hero-right {
+    padding-top: 0.5rem;
+  }
+  .hero-statement {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .hero-body {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+  .hero-actions {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .hero-stats {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .stat-num em { font-style: italic; color: var(--brass); }
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+  }
+
+  /* ════════════════════════════════════════
+     SECTION 2 — WHAT I DO (SERVICES)
+  ════════════════════════════════════════ */
+  #services {
+    padding: 6rem 0;
+    background: var(--ivory-warm);
+    border-bottom: 1px solid var(--border);
+  }
+  .services-header {
+    max-width: 680px;
+    margin-bottom: 4rem;
+  }
+  .services-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-top: 1rem;
+  }
+  .services-header p {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .service-card {
+    background: var(--ivory-warm);
+    padding: 2.5rem;
+    transition: background 0.3s;
+  }
+  .service-card:hover { background: var(--ivory); }
+  .service-num {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--brass);
+    margin-bottom: 1.2rem;
+  }
+  .service-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+  .service-body {
+    margin-top: 0.85rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .service-tags {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: transparent;
+  }
+
+  /* ════════════════════════════════════════
+     SECTION 3 — AI PRACTICE (DARK)
+  ════════════════════════════════════════ */
+  #ai {
+    background: var(--ink);
+    color: var(--ivory);
+    padding: 6rem 0;
+    border-bottom: 1px solid rgba(245,240,232,0.08);
+  }
+  #ai .eyebrow { color: rgba(176,141,87,0.8); }
+  #ai .eyebrow-line { background: rgba(176,141,87,0.6); }
+  .ai-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 4rem;
+  }
+  .ai-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--ivory);
+    margin-top: 1rem;
+  }
+  .ai-header p {
+    color: rgba(245,240,232,0.55);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    align-self: end;
+  }
+  .ai-capabilities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(245,240,232,0.08);
+    border: 1px solid rgba(245,240,232,0.08);
+  }
+  .ai-cap {
+    background: var(--ink);
+    padding: 2.5rem;
+    transition: background 0.3s;
+  }
+  .ai-cap:hover { background: rgba(245,240,232,0.04); }
+  .ai-cap-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 0.8rem;
+  }
+  .ai-cap h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--ivory);
+    line-height: 1.2;
+  }
+  .ai-cap p {
+    margin-top: 0.75rem;
+    font-size: 0.83rem;
+    color: rgba(245,240,232,0.5);
+    line-height: 1.7;
+  }
+  .ai-cap ul {
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .ai-cap ul li {
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.55);
+    padding-left: 1rem;
+    position: relative;
+  }
+  .ai-cap ul li::before {
+    content: '—';
+    position: absolute; left: 0;
+    color: var(--brass);
+    font-size: 0.7rem;
+  }
+
+  /* Hands-on builds strip */
+  .ai-builds {
+    margin-top: 3rem;
+    border: 1px solid rgba(245,240,232,0.1);
+    padding: 2rem 2.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .ai-builds-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass);
+    white-space: nowrap;
+  }
+  .builds-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .build-pill {
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    letter-spacing: 0.1em;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid rgba(176,141,87,0.35);
+    color: rgba(245,240,232,0.7);
+    background: rgba(176,141,87,0.06);
+  }
+
+  /* ════════════════════════════════════════
+     SECTION 4 — CASE STUDIES
+  ════════════════════════════════════════ */
+  #work {
+    padding: 6rem 0;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--border);
+  }
+  .work-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: end;
+  }
+  .work-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-top: 1rem;
+  }
+  .work-header p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.75;
+    align-self: end;
+  }
+  .cases {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .case {
+    background: var(--ivory);
+    display: grid;
+    grid-template-columns: 3rem 1fr 1fr auto;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    align-items: start;
+    transition: background 0.3s;
+  }
+  .case:hover { background: var(--ivory-warm); }
+  .case-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--brass);
+    line-height: 1;
+    padding-top: 0.2rem;
+  }
+  .case-industry {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .case-title {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .case-detail-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .case-detail-body {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .case-metric-num {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .case-metric-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+  }
+
+  /* ════════════════════════════════════════
+     SECTION 5 — HOW I ENGAGE
+  ════════════════════════════════════════ */
+  #engage {
+    padding: 6rem 0;
+    background: var(--ivory-warm);
+    border-bottom: 1px solid var(--border);
+  }
+  .engage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .engage-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-top: 1rem;
+  }
+  .engage-left p {
+    margin-top: 1.25rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+  .engage-models {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .engage-model {
+    background: var(--ivory-warm);
+    padding: 1.75rem 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    transition: background 0.3s;
+  }
+  .engage-model:hover { background: var(--ivory); }
+  .engage-model-icon {
+    width: 2rem; height: 2rem;
+    display: grid; place-items: center;
+    background: rgba(176,141,87,0.12);
+    border: 1px solid rgba(176,141,87,0.25);
+    color: var(--brass);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    flex-shrink: 0;
+  }
+  .engage-model-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .engage-model-body {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-top: 0.25rem;
+  }
+
+  /* ════════════════════════════════════════
+     SECTION 6 — TECH STACK
+  ════════════════════════════════════════ */
+  #stack {
+    padding: 5rem 0;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--border);
+  }
+  .stack-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .stack-col {
+    background: var(--ivory);
+    padding: 1.75rem;
+    transition: background 0.25s;
+  }
+  .stack-col:hover { background: var(--ivory-warm); }
+  .stack-col-title {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 1rem;
+  }
+  .stack-col ul { list-style: none; }
+  .stack-col ul li {
+    font-size: 0.82rem;
+    color: var(--muted);
+    padding: 0.25rem 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.4;
+  }
+  .stack-col ul li:last-child { border-bottom: none; }
+
+  /* ════════════════════════════════════════
+     SECTION 7 — CTA
+  ════════════════════════════════════════ */
+  #cta {
+    background: var(--ink);
+    padding: 6rem 0;
+  }
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: end;
+  }
+  .cta-grid h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--ivory);
+    margin-top: 1rem;
+  }
+  .cta-grid p {
+    margin-top: 1.25rem;
+    color: rgba(245,240,232,0.5);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    max-width: 560px;
+  }
+  .cta-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
+  .cta-contact-line {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: rgba(245,240,232,0.35);
+  }
+  .cta-contact-line a {
+    color: rgba(245,240,232,0.6);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(245,240,232,0.2);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+  .cta-contact-line a:hover { color: var(--brass-light); }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid rgba(245,240,232,0.08);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    color: rgba(245,240,232,0.4);
+    text-decoration: none;
+  }
+  .footer-logo span { color: var(--brass); }
+  .footer-right {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.25);
+  }
+  .footer-right a {
+    color: rgba(245,240,232,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-right a:hover { color: var(--brass); }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .hero-grid, .ai-header, .work-header, .engage-grid, .cta-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: 1fr; }
+    .ai-capabilities { grid-template-columns: 1fr; }
+    .case { grid-template-columns: 2.5rem 1fr; }
+    .case-detail, .case-metric-col { display: none; }
+    .stack-grid { grid-template-columns: repeat(2, 1fr); }
+    nav .nav-links { display: none; }
+  }
+  @media (max-width: 600px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .stack-grid { grid-template-columns: 1fr; }
+    .ai-builds { grid-template-columns: 1fr; }
+    .container, .container-narrow { padding: 0 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#hero" class="nav-logo">Anand <span>Vidyarthi</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#ai">AI Practice</a>
+    <a href="#work">Work</a>
+    <a href="#engage">Engage</a>
+    <a href="https://www.clarixconsulting.com" target="_blank">Clarix Consulting</a>
+    <a href="mailto:anandvidy@gmail.com" class="nav-cta">Get in Touch</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="eyebrow fade-up">
+      <span class="eyebrow-line"></span>
+      Fractional CTO · Engineering Delivery Leader
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-name fade-up delay-1">
+          Anand<br /><em>Vidyarthi</em>
+        </h1>
+        <p class="hero-title fade-up delay-2">
+          <strong>Fractional CTO</strong> &nbsp;·&nbsp; Interim VP Engineering<br />
+          AI Transformation Advisor &nbsp;·&nbsp; Delivery Leader<br />
+          Placentia, CA &nbsp;·&nbsp; Available Nationwide
+        </p>
+      </div>
+
+      <div class="hero-right fade-up delay-2">
+        <p class="hero-statement">
+          Most firms send a framework. I send someone who has already run the program — at scale, in your industry, with the P&amp;L to prove it.
+        </p>
+        <p class="hero-body">
+          Twenty years building and scaling engineering organizations for Fortune 500 companies. 
+          I step in as your senior technical leader — owning delivery end to end, not just advising on it. 
+          Whether you need a Fractional CTO to run your engineering org, an AI transformation lead to take 
+          pilots into production, or a delivery executive to rescue a program — I operate at the principal level from day one.
+        </p>
+        <div class="hero-actions">
+          <a href="mailto:anandvidy@gmail.com" class="btn btn-ink">
+            Start a Conversation
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/avidyarthi/" target="_blank" class="btn btn-outline">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats fade-up delay-4">
+      <div>
+        <div class="stat-num">$20<em>M+</em></div>
+        <div class="stat-label">Annual delivery<br />portfolio managed</div>
+      </div>
+      <div>
+        <div class="stat-num">120<em>+</em></div>
+        <div class="stat-label">Engineers led across<br />concurrent engagements</div>
+      </div>
+      <div>
+        <div class="stat-num">20<em>yr</em></div>
+        <div class="stat-label">Enterprise software<br />leadership</div>
+      </div>
+      <div>
+        <div class="stat-num">F500</div>
+        <div class="stat-label">FinServ · Insurance<br />Life Sciences · Mfg</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SECTION 2 — SERVICES
+════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="eyebrow"><span class="eyebrow-line"></span>What I do</div>
+      <h2>Senior-level leadership across the full delivery lifecycle.</h2>
+      <p>Each engagement is principal-led. No handoffs to junior staff. No methodology theater. The person you speak with is the person who does the work.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-title">Fractional CTO</div>
+        <p class="service-body">
+          Embedded senior technical leadership for companies that need a CTO-level operator 
+          without the full-time overhead. I own your engineering strategy, team structure, 
+          vendor decisions, and delivery infrastructure — and I'm accountable for outcomes, not just advice.
+        </p>
+        <div class="service-tags">
+          <span class="tag">Engineering Org Design</span>
+          <span class="tag">Tech Strategy</span>
+          <span class="tag">Board Reporting</span>
+          <span class="tag">Vendor Negotiation</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-title">AI &amp; Cloud Transformation</div>
+        <p class="service-body">
+          From AI readiness assessment through to production deployment. I've led RAG pipeline 
+          architecture, agentic AI workflows, LLM-powered automation, and AI-driven SDLC transformation 
+          across FinServ, Manufacturing, and Life Sciences. Strategy and delivery — not just the roadmap.
+        </p>
+        <div class="service-tags">
+          <span class="tag">GenAI / Agentic AI</span>
+          <span class="tag">RAG Pipelines</span>
+          <span class="tag">AI-Driven SDLC</span>
+          <span class="tag">Cloud Migration</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-title">Program &amp; Delivery Leadership</div>
+        <p class="service-body">
+          Complex program execution for organizations that need a senior operator to own timelines, 
+          budgets, stakeholder alignment, and team performance. I've managed 15+ concurrent Fortune 500 
+          engagements. P&amp;L accountable from the first conversation.
+        </p>
+        <div class="service-tags">
+          <span class="tag">P&L Ownership</span>
+          <span class="tag">SOW Development</span>
+          <span class="tag">Risk Management</span>
+          <span class="tag">Executive Reporting</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-title">AI Framework Evaluation &amp; Governance</div>
+        <p class="service-body">
+          Structured evaluation of AI tools, platforms, and frameworks against your specific 
+          delivery context — build vs. buy, vendor selection, LLM selection, and responsible AI 
+          governance. I've navigated these decisions at enterprise scale and bring a practitioner's 
+          lens, not a vendor's pitch.
+        </p>
+        <div class="service-tags">
+          <span class="tag">LLM Selection</span>
+          <span class="tag">AI Governance</span>
+          <span class="tag">Build vs Buy</span>
+          <span class="tag">Responsible AI</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-title">Engineering Modernization</div>
+        <p class="service-body">
+          Legacy platform modernization using proven patterns — Strangler Fig, event-driven 
+          refactoring, cloud-native migration. I've eliminated 90% technical debt at zero downtime 
+          and led multi-million-dollar re-engineering programs. I understand the political and 
+          organizational complexity, not just the architecture.
+        </p>
+        <div class="service-tags">
+          <span class="tag">Strangler Fig</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">DevSecOps</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-title">Delivery in Regulated Environments</div>
+        <p class="service-body">
+          Engineering delivery experience in FDA-regulated Life Sciences (HL7, FHIR, Design Controls), 
+          financial services compliance, and insurance. I understand how regulated constraints interact 
+          with delivery velocity — and how to build teams that don't sacrifice one for the other.
+        </p>
+        <div class="service-tags">
+          <span class="tag">Life Sciences / FDA</span>
+          <span class="tag">HL7 / FHIR</span>
+          <span class="tag">FinServ Compliance</span>
+          <span class="tag">Audit Readiness</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SECTION 3 — AI PRACTICE
+════════════════════════════════════════ -->
+<section id="ai">
+  <div class="container">
+
+    <div class="ai-header">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span>AI Practice</div>
+        <h2>Strategy to production — not just the slide.</h2>
+      </div>
+      <p>
+        Most AI initiatives stall between pilot and production. I've led the full journey: 
+        architecture, team enablement, governance, and deployment. Hands-on LLM prototyping 
+        capability combined with the delivery infrastructure to scale it.
+      </p>
+    </div>
+
+    <div class="ai-capabilities">
+
+      <div class="ai-cap">
+        <div class="ai-cap-label">Capability 01</div>
+        <h3>RAG Pipelines &amp; LLM Integration</h3>
+        <p>Production-grade retrieval-augmented generation architecture for enterprise knowledge management, contact center automation, and document intelligence.</p>
+        <ul>
+          <li>Azure OpenAI &amp; AWS Bedrock deployment</li>
+          <li>Vector store design and indexing strategy</li>
+          <li>Prompt engineering and evaluation frameworks</li>
+          <li>LangChain / LangGraph agentic workflows</li>
+        </ul>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-label">Capability 02</div>
+        <h3>AI-Driven SDLC &amp; QA Transformation</h3>
+        <p>I've led the transition of entire engineering organizations to AI-centric delivery models — not just adding Copilot, but restructuring how teams plan, build, test, and ship.</p>
+        <ul>
+          <li>ML-based test automation and intelligent defect triage</li>
+          <li>AI-powered QA test case generation (built personally)</li>
+          <li>GitHub Copilot adoption and developer onboarding acceleration</li>
+          <li>Agentic project status reporting workflows</li>
+        </ul>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-label">Capability 03</div>
+        <h3>AI Framework Evaluation &amp; Governance</h3>
+        <p>Structured decision frameworks for organizations navigating the AI tooling landscape — without getting sold a platform that doesn't fit their delivery reality.</p>
+        <ul>
+          <li>LLM selection: GPT-4, Claude, Llama, Gemini — use-case matched</li>
+          <li>Build vs. buy vs. fine-tune analysis</li>
+          <li>Responsible AI governance and policy alignment</li>
+          <li>IAPP AI Governance Professional (in progress)</li>
+        </ul>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-label">Capability 04</div>
+        <h3>Agentic AI &amp; Intelligent Automation</h3>
+        <p>Deployed agentic AI for IT support automation, intelligent process automation for regulated workflows, and MCP-based developer tooling for large codebases.</p>
+        <ul>
+          <li>LLM-powered IT support chatbot (40% ticket resolution reduction)</li>
+          <li>Automated business rules engine (90% process efficiency gain)</li>
+          <li>MCP Server over Azure DevOps for codebase navigation</li>
+          <li>UiPath RPA with AI-enhanced decision layers</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="ai-builds">
+      <div class="ai-builds-label">Built personally —</div>
+      <div class="builds-list">
+        <span class="build-pill">QA Test Case Generator</span>
+        <span class="build-pill">Agentic PM Status Report Workflow</span>
+        <span class="build-pill">MCP Server → Azure DevOps</span>
+        <span class="build-pill">RAG Pipeline (Contact Center)</span>
+        <span class="build-pill">LLM IT Support Chatbot</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SECTION 4 — CASE STUDIES
+════════════════════════════════════════ -->
+<section id="work">
+  <div class="container">
+
+    <div class="work-header">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span>Selected work</div>
+        <h2>Outcomes from recent engagements.</h2>
+      </div>
+      <p>Client names withheld per confidentiality. These are outcomes from Anand's direct delivery track record — not Clarix firm history.</p>
+    </div>
+
+    <div class="cases">
+
+      <div class="case">
+        <div class="case-num">01</div>
+        <div>
+          <div class="case-industry">Insurance / FinServ</div>
+          <div class="case-title">Contact Center AI Transformation</div>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-label">What was done</div>
+          <div class="case-detail-body">Architected a RAG pipeline on Azure OpenAI for enterprise knowledge management and deployed an LLM-powered IT support chatbot. Led full transition of SDLC and QA processes to AI-centric model with ML-based automation.</div>
+        </div>
+        <div class="case-metric-col">
+          <div class="case-metric-num">40%</div>
+          <div class="case-metric-label">Ticket resolution<br />time reduction</div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-num">02</div>
+        <div>
+          <div class="case-industry">Title Insurance</div>
+          <div class="case-title">Technical Debt Elimination at Zero Downtime</div>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-label">What was done</div>
+          <div class="case-detail-body">Applied Strangler Fig modernization pattern to a legacy Lender Integration System carrying 90% technical debt. Re-engineered on Salesforce and MuleSoft with incremental migration and no production disruptions. $4M program.</div>
+        </div>
+        <div class="case-metric-col">
+          <div class="case-metric-num">90%</div>
+          <div class="case-metric-label">Technical debt<br />eliminated</div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-num">03</div>
+        <div>
+          <div class="case-industry">Financial Services</div>
+          <div class="case-title">Operating Cost Transformation</div>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-label">What was done</div>
+          <div class="case-detail-body">Full P&amp;L accountability for $10M+ technology portfolio. Systematic portfolio rationalization, vendor consolidation (Informatica → Boomi, $250K/yr savings), and Agile delivery model adoption across 18 FTE.</div>
+        </div>
+        <div class="case-metric-col">
+          <div class="case-metric-num">65%</div>
+          <div class="case-metric-label">Operating cost<br />reduction · 79% productivity gain</div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-num">04</div>
+        <div>
+          <div class="case-industry">Real Estate / Retail</div>
+          <div class="case-title">Cloud Migration &amp; Cost Optimization</div>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-label">What was done</div>
+          <div class="case-detail-body">Executed Cloud Optimizely migration aligned to Azure Well-Architected Framework. Led Azure migration of Leads Processing system with active FinOps governance and infrastructure rationalization.</div>
+        </div>
+        <div class="case-metric-col">
+          <div class="case-metric-num">70%</div>
+          <div class="case-metric-label">Infrastructure &amp; licensing<br />cost reduction</div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-num">05</div>
+        <div>
+          <div class="case-industry">Manufacturing</div>
+          <div class="case-title">AI-Driven Delivery Acceleration</div>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-label">What was done</div>
+          <div class="case-detail-body">Led AI-centric SDLC transition with ML-based test automation, intelligent defect triage, and GitHub Copilot adoption across engineering org. Reduced developer onboarding time and restructured QA processes around AI tooling.</div>
+        </div>
+        <div class="case-metric-col">
+          <div class="case-metric-num">25%</div>
+          <div class="case-metric-label">Delivery acceleration ·<br />40% defect detection improvement</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SECTION 5 — HOW I ENGAGE
+════════════════════════════════════════ -->
+<section id="engage">
+  <div class="container">
+    <div class="engage-grid">
+
+      <div class="engage-left">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Engagement models</div>
+        <h2>How we work together.</h2>
+        <p>
+          Every engagement starts with a structured discovery conversation — no sales pitch, 
+          no generic proposal. I want to understand the real constraint before recommending anything.
+        </p>
+        <p style="margin-top:1rem;">
+          Rate: $250–$350/hr fractional · Project-based engagements available.<br />
+          Based in SoCal. Available nationally.
+        </p>
+        <div style="margin-top:2rem;">
+          <a href="mailto:anandvidy@gmail.com" class="btn btn-ink">
+            Schedule a Discovery Call
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="engage-models">
+
+          <div class="engage-model">
+            <div class="engage-model-icon">F</div>
+            <div>
+              <div class="engage-model-title">Fractional CTO / VP Engineering</div>
+              <div class="engage-model-body">Ongoing embedded leadership. Typically 2–3 days/week. Own your engineering org, vendor strategy, and delivery infrastructure. Minimum 3-month engagement.</div>
+            </div>
+          </div>
+
+          <div class="engage-model">
+            <div class="engage-model-icon">AI</div>
+            <div>
+              <div class="engage-model-title">AI Readiness Assessment</div>
+              <div class="engage-model-body">Structured 2–4 week engagement. Assess your current state, identify highest-value AI opportunities, evaluate build/buy/partner options, and deliver a prioritized roadmap with governance framework. Fixed fee.</div>
+            </div>
+          </div>
+
+          <div class="engage-model">
+            <div class="engage-model-icon">P</div>
+            <div>
+              <div class="engage-model-title">Program Rescue / Delivery Leadership</div>
+              <div class="engage-model-body">Step-in delivery leadership for programs that are off-track. I own the recovery plan, stakeholder alignment, and execution. Available for 30-day rapid assessments or full program ownership.</div>
+            </div>
+          </div>
+
+          <div class="engage-model">
+            <div class="engage-model-icon">A</div>
+            <div>
+              <div class="engage-model-title">Advisory Retainer</div>
+              <div class="engage-model-body">Monthly retainer for ongoing strategic access. Architectural decisions, vendor evaluations, hiring strategy, board prep. Ideal for CTOs and VPs who need a senior thought partner.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SECTION 6 — TECH STACK
+════════════════════════════════════════ -->
+<section id="stack">
+  <div class="container">
+    <div class="eyebrow"><span class="eyebrow-line"></span>Technology fluency</div>
+    <div class="stack-grid">
+      <div class="stack-col">
+        <div class="stack-col-title">Cloud &amp; Infra</div>
+        <ul>
+          <li>Microsoft Azure</li>
+          <li>Amazon Web Services</li>
+          <li>Terraform / Ansible</li>
+          <li>Azure DevOps</li>
+          <li>GitHub Actions</li>
+          <li>DevSecOps / CI/CD</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-col-title">AI &amp; ML</div>
+        <ul>
+          <li>Azure OpenAI</li>
+          <li>AWS Bedrock</li>
+          <li>LangChain / LangGraph</li>
+          <li>Copilot Studio</li>
+          <li>GitHub Copilot</li>
+          <li>AWS SageMaker</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-col-title">Data &amp; Analytics</div>
+        <ul>
+          <li>Microsoft Fabric</li>
+          <li>Tableau</li>
+          <li>Databricks</li>
+          <li>Cosmos DB</li>
+          <li>SQL / NoSQL</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-col-title">Integration</div>
+        <ul>
+          <li>MuleSoft</li>
+          <li>Boomi</li>
+          <li>Salesforce</li>
+          <li>ServiceNow</li>
+          <li>UiPath RPA</li>
+          <li>Optimizely</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-col-title">Languages</div>
+        <ul>
+          <li>C# .NET Core</li>
+          <li>Python</li>
+          <li>React / Angular</li>
+          <li>Node.js</li>
+          <li>REST / GraphQL APIs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SECTION 7 — CTA
+════════════════════════════════════════ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-grid">
+      <div>
+        <div class="eyebrow" style="color:rgba(176,141,87,0.7);">
+          <span class="eyebrow-line" style="background:rgba(176,141,87,0.5);"></span>
+          Let's work together
+        </div>
+        <h2>Have a program that has to land — or an engineering org that needs a leader?</h2>
+        <p>Tell me the problem. I'll tell you honestly whether I'm the right fit — and if so, exactly how I'd approach it. No pitch deck. No junior follow-up.</p>
+      </div>
+      <div class="cta-right">
+        <a href="mailto:anandvidy@gmail.com" class="btn btn-outline-ivory">
+          anandvidy@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/avidyarthi/" target="_blank" class="btn btn-outline-ivory">
+          LinkedIn Profile
+        </a>
+        <a href="https://www.clarixconsulting.com" target="_blank" class="btn btn-outline-ivory">
+          Clarix Consulting Group ↗
+        </a>
+        <p class="cta-contact-line">714-655-3436 · Placentia, CA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <a href="#hero" class="footer-logo">Anand <span>Vidyarthi</span></a>
+  <div class="footer-right">
+    Principal · <a href="https://www.clarixconsulting.com" target="_blank">Clarix Consulting Group</a>
+    &nbsp;·&nbsp; Placentia, CA
+  </div>
+</footer>
+
+</body>
+</html>
